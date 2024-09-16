@@ -1,16 +1,24 @@
-
 var change = document.getElementById('change')
+var body = document.body
+
+
 
 change.style.color = 'white'
-change.style.background = 'black'
- function color() {
-    var color = change.style.color === 'white' ? 'black': 'white';
-    change.style.color = color
+change.style.backgroundColor = 'black'
+body.style.backgroundColor = 'white'
 
-    var background = change.style.background === 'black'? 'white': 'black';
-    change.style.background = background
-    change.textContent = 'night'
+function color() {
 
-    document.body.style.backgroundColor = 'black';
 
- }
+if(body.style.backgroundColor === 'white'){
+    body.style.backgroundColor = 'black'
+   change.style.color = 'black'
+   change.style.backgroundColor = 'white'
+   change.textContent = 'Night'
+} else {
+   body.style.backgroundColor = 'white'
+   change.style.color = 'white'    
+   change.style.backgroundColor = 'black'
+     change .textContent = 'DAY'
+}
+}
